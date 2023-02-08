@@ -10,3 +10,12 @@
 
 - sort (a, b) => ( a.column - b.column)
 - onClick Button event - 최신순, 칼로리순으로 정렬하기
+
+## 4. Filter로 아이템 삭제하기
+
+1. setter 함수 생성 : item, setItems , default : mockItem
+2. 삭제버튼으로 내려줄 함수 생성하기 : App.js / handleDelete()
+3. handleDelete 함수에서 id 를 받아서 items list filter 처리하기
+4. APP 에서 FoodList로 handleDelete Prop 전달 > FoodListItems로 prop으로 전달
+5. FoodListItem에서 삭제 버튼 생성하고 Onclick 함수 생성 : handleDeleteClick
+6. handleDeleteClick에서 item.id를 handleDelete함수로 전달하기.
