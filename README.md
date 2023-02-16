@@ -33,3 +33,9 @@
 ## 7. 페이지가 열렸을 때 음식 목록가져오기
 
 1. App.js 파일에서 useEffect 을 활용하여 handleLoad 콜백함수 실행과 빈배열을 전달한다.
+
+## 8. 서버에서 정렬된 데이터 불러오기
+
+1. api.js getFoods함수에서 파라미터로 order를 받고 query가 변경되면 url이 변경되도록 수정한다.
+2. App.js 에서 getFoods함수가 호출되는 부분 handleLoad()에 아큐먼트로 order 값이 전달되게 변경한다.
+3. App.js 의 useEffect 부분에서 handleLoad함수에 order를 전달해주도록 변경하고, 디펜던시리스트에서 order 값을 기억하도록 설정해준다.
