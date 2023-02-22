@@ -39,3 +39,13 @@
 1. api.js getFoods함수에서 파라미터로 order를 받고 query가 변경되면 url이 변경되도록 수정한다.
 2. App.js 에서 getFoods함수가 호출되는 부분 handleLoad()에 아큐먼트로 order 값이 전달되게 변경한다.
 3. App.js 의 useEffect 부분에서 handleLoad함수에 order를 전달해주도록 변경하고, 디펜던시리스트에서 order 값을 기억하도록 설정해준다.
+
+## 9. 커서기반 페이지네이션 사용하기
+
+1. api.js 에서 파라미터 부분에 cursor와 limit 부분 추가 후 query 변경하기
+2. App.js 에서 getFoods가 실행되는 handleLaod argument 수정
+3. app.js 에서 useEffect에 실행되는 초기 실행부분에서 handleLoad argument 변경
+4. app.js 에서 cursor 와 setCursor state 생성하기
+5. handleLoadMore 함수 생성하기 : handelLoad 를 실행하고 cursor state 를 넘기도록함
+6. handleLoad 함수 수정 : parameter로 받은 options.cursor 값이 ""이 아닐때 리스트 추가, 하고 response로 받은 paging.nextCursor값으로 setCursor 설정
+7. html에서 더보기 버튼 생성하고 onClcik 함수로 handlerLoadMore 함수 실행하도록 전달
