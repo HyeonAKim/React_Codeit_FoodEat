@@ -43,17 +43,16 @@ function App() {
   };
 
   useEffect(() => {
-    handleLoad({ order });
-  }, [order]);
+    handleLoad({ order, search: searchWord });
+  }, [order, searchWord]);
 
   const handleLoadMore = () => {
-    handleLoad({ order, cursor, LIMIT });
+    handleLoad({ order, cursor, LIMIT, searchWord });
   };
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     setSearchWord(e.target["search"].value);
-    handleLoad({ order, cursor: "", LIMIT, search: searchWord });
   };
   return (
     <div>

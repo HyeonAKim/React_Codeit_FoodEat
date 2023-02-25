@@ -61,3 +61,8 @@
 1. 검색어 받을 input form과 state 생성하기
 2. handleSearchSubmit 실행 시 cursor 빈값으로 넘기기
 3. api.js 쿼리에서 search 받아서 쿼리 날리기
+
+## 12. 검색 기능 추가하기 (모범답안)
+
+1. state가 변경되면서 랜더링 되는것을 고려해서 handleSearchSubmit이 아닌 useEffect에 search를 추가해준다.
+2. 더보기 버튼을 누를 때도 search props을 같이 넘겨준다.
