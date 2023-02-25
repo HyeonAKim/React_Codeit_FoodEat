@@ -55,3 +55,9 @@
 1. api.js에서 reponse 가 ok가 아닐 때 에러를 뱉도록 설정
 2. App.js에서 loadingError state생성하고 에러를 보여줄 수 있도록 설정.
 3. App.js에서 isLoading state를 생성하고 로딩하는 동안 더보기 버튼을 비활성화하도록 설정
+
+## 11. 검색 기능 추가하기
+
+1. 검색어 받을 input form과 state 생성하기
+2. handleSearchSubmit 실행 시 cursor 빈값으로 넘기기
+3. api.js 쿼리에서 search 받아서 쿼리 날리기

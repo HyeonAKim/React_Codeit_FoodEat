@@ -9,6 +9,8 @@ function App() {
   const [cursor, setCursor] = useState(null);
   const [loadingError, setLoadingError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [searchWord, setSearchWord] = useState("");
+
   const sortedItemList = items.sort((a, b) => b[order] - a[order]);
 
   const handleLastClick = () => setOrder("createdAt");
@@ -48,10 +50,19 @@ function App() {
     handleLoad({ order, cursor, LIMIT });
   };
 
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    setSearchWord(e.target["search"].value);
+    handleLoad({ order, cursor: "", LIMIT, search: searchWord });
+  };
   return (
     <div>
       <button onClick={handleLastClick}>최신순</button>
       <button onClick={handleCaloriClick}>칼로리순</button>
+      <form onSubmit={handleSearchSubmit}>
+        <input name="search"></input>
+        <button type="submit">검색</button>
+      </form>
       <FoodList items={sortedItemList} onDelete={handleDelete}></FoodList>
       {cursor && (
         <button disabled={isLoading} onClick={handleLoadMore}>
