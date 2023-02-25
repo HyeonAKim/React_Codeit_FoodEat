@@ -49,3 +49,9 @@
 5. handleLoadMore 함수 생성하기 : handelLoad 를 실행하고 cursor state 를 넘기도록함
 6. handleLoad 함수 수정 : parameter로 받은 options.cursor 값이 ""이 아닐때 리스트 추가, 하고 response로 받은 paging.nextCursor값으로 setCursor 설정
 7. html에서 더보기 버튼 생성하고 onClcik 함수로 handlerLoadMore 함수 실행하도록 전달
+
+## 10. 네트워크 로딩과 에러처리하기
+
+1. api.js에서 reponse 가 ok가 아닐 때 에러를 뱉도록 설정
+2. App.js에서 loadingError state생성하고 에러를 보여줄 수 있도록 설정.
+3. App.js에서 isLoading state를 생성하고 로딩하는 동안 더보기 버튼을 비활성화하도록 설정
