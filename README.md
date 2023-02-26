@@ -66,3 +66,9 @@
 
 1. state가 변경되면서 랜더링 되는것을 고려해서 handleSearchSubmit이 아닌 useEffect에 search를 추가해준다.
 2. 더보기 버튼을 누를 때도 search props을 같이 넘겨준다.
+
+## 13. 입력폼 생성하기
+
+1. FoodForm.js생성하기
+2. title, calorie, content state 생성
+3. App.js FoodForm 적용하기

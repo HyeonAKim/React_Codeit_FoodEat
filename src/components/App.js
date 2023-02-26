@@ -1,6 +1,7 @@
 import FoodList from "./FoodListItem";
 import { useEffect, useState } from "react";
 import { getFoods } from "../api";
+import FoodForm from "./FoodForm";
 
 const LIMIT = 6;
 function App() {
@@ -62,6 +63,7 @@ function App() {
         <input name="search"></input>
         <button type="submit">검색</button>
       </form>
+      <FoodForm />
       <FoodList items={sortedItemList} onDelete={handleDelete}></FoodList>
       {cursor && (
         <button disabled={isLoading} onClick={handleLoadMore}>
