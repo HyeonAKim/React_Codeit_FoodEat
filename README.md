@@ -72,3 +72,9 @@
 1. FoodForm.js생성하기
 2. title, calorie, content state 생성
 3. App.js FoodForm 적용하기
+
+## 14. 입력폼 생성하기 (2)
+
+1. FoodForm.js values state로 객체 값들을 관리 , 처리함수도 handleChange로 통일
+2. submit type의 버튼 추가
+3. handleSumit으로 values값들 출력
