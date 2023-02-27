@@ -78,3 +78,8 @@
 1. FoodForm.js values state로 객체 값들을 관리 , 처리함수도 handleChange로 통일
 2. submit type의 버튼 추가
 3. handleSumit으로 values값들 출력
+
+## 15. 파일 인풋 생성하기
+
+1. FileInput.js 생성 후 input태그 생성과 값 변경시 부모함수로 전달
+2. FoodForm.js에서는 handleChange에서 받아 온값으로 state 값 변경
