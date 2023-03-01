@@ -83,3 +83,9 @@
 
 1. FileInput.js 생성 후 input태그 생성과 값 변경시 부모함수로 전달
 2. FoodForm.js에서는 handleChange에서 받아 온값으로 state 값 변경
+
+## 16. 파일 인풋 초기화하기
+
+1. useRef 를 사용해서 인풋객체의 값 가져오기 : inputRef 생성 후 input 태그에 ref 걸기
+2. value값이 있을 경우 초기화 버튼이 생성되도록 만들고 :
+3. 클릭이벤트로 초기화 하도록 하기. : handleClearClick
