@@ -96,3 +96,10 @@
 2. 이미지 태그 생성하기
 3. value 값 (선택한 이미지값) 이 변경 될 때마다 preview 이미지 링크 바꾸기 : useEffect 사용
 4. 초기화 버튼을 눌렀을때 브라우져 메모리에 저장된 이미지 초기화하기
+
+## 18. 글 작성하기
+
+1. api.js 에서 작성된 글을 서버에 보내는 함수 생성하기 : api.js createFoods()
+2. foodForm 에서 확인 버튼을 누를때 1) 함수 실행하도록 하기 : foodForm.js handleSubmit()
+3. foodForm submit 함수에서 중복으로 처리되는 걸 방지하기 위한 에러처리하기 : foodForm.js setSubmittingError , setIsSubmitting
+4. 서버에서 받은 response값을 음식 list에 추가하여 새로고침하지 않아도 바로 보여지도록 처리하기 : App.js handleSubmitSuccess()

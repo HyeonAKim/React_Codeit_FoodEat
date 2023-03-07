@@ -43,10 +43,6 @@ function App() {
     setCursor(paging.nextCursor);
   };
 
-  useEffect(() => {
-    handleLoad({ order, search: searchWord });
-  }, [order, searchWord]);
-
   const handleLoadMore = () => {
     handleLoad({ order, cursor, LIMIT, searchWord });
   };
@@ -55,6 +51,15 @@ function App() {
     e.preventDefault();
     setSearchWord(e.target["search"].value);
   };
+
+  const handleSubmitSuccess = (food) => {
+    setItems((preitems) => [food, ...preitems]);
+  };
+
+  useEffect(() => {
+    handleLoad({ order, search: searchWord });
+  }, [order, searchWord]);
+
   return (
     <div>
       <button onClick={handleLastClick}>최신순</button>
@@ -63,7 +68,7 @@ function App() {
         <input name="search"></input>
         <button type="submit">검색</button>
       </form>
-      <FoodForm />
+      <FoodForm onSubmitSuccess={handleSubmitSuccess} />
       <FoodList items={sortedItemList} onDelete={handleDelete}></FoodList>
       {cursor && (
         <button disabled={isLoading} onClick={handleLoadMore}>
